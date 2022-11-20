@@ -73,8 +73,10 @@ object SciSparkReadTest {
 
     /** ***************save output ***************/
     distanceRDD.coalesce(1).toDF().write.mode("overwrite").format("csv").save(distanceOPPath)
+    print("adding a comment")
+   //comment
 
-    /** ***********************times ************/
+    /** ***********************times */
     var endTime = System.currentTimeMillis()
     println("total time in sec " + (endTime - startTime) / 1000)
     println("read time " + (timeAfterRead - startTime) / 1000)
